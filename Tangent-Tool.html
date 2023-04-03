@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2299">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+  </style>
+</head>
+<body>
+<p class="p1"><br></p>
+<p class="p2">&lt;!DOCTYPE html&gt;</p>
+<p class="p2">&lt;html lang="en"&gt;</p>
+<p class="p2">&lt;head&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span>&lt;title&gt;Document&lt;/title&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"&gt;&lt;/script&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span></p>
+<p class="p2"><span class="Apple-converted-space">      </span>body {</p>
+<p class="p2"><span class="Apple-converted-space">      </span>font-family: Inter, sans-serif;</p>
+<p class="p2"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p2"><span class="Apple-converted-space">      </span>padding: 0;</p>
+<p class="p2"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span></p>
+<p class="p2"><span class="Apple-converted-space">    </span>.file-label {</p>
+<p class="p2"><span class="Apple-converted-space">      </span>font-size: 16px;</p>
+<p class="p2"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span></p>
+<p class="p2"><span class="Apple-converted-space">    </span>.file-input {</p>
+<p class="p2"><span class="Apple-converted-space">      </span>font-family: Inter, sans-serif;</p>
+<p class="p2"><span class="Apple-converted-space">      </span>font-size: 16px;</p>
+<p class="p2"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p2"><span class="Apple-converted-space">      </span>background-color: #f0f0f0;</p>
+<p class="p2"><span class="Apple-converted-space">      </span>border: 1px solid #cccccc;</p>
+<p class="p2"><span class="Apple-converted-space">      </span>padding: 5px;</p>
+<p class="p2"><span class="Apple-converted-space">      </span>color: #B85E5E;</p>
+<p class="p2"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span></p>
+<p class="p2"><span class="Apple-converted-space">        </span>.slider {</p>
+<p class="p2"><span class="Apple-converted-space">            </span>-webkit-appearance: none;</p>
+<p class="p2"><span class="Apple-converted-space">            </span>width: 200px;</p>
+<p class="p2"><span class="Apple-converted-space">            </span>height: 5px;</p>
+<p class="p2"><span class="Apple-converted-space">            </span>border-radius: 0px;</p>
+<p class="p2"><span class="Apple-converted-space">            </span>background: #DADADA;</p>
+<p class="p2"><span class="Apple-converted-space">            </span>outline: none;</p>
+<p class="p2"><span class="Apple-converted-space">            </span>opacity: 0.7;</p>
+<p class="p2"><span class="Apple-converted-space">            </span>-webkit-transition: .2s;</p>
+<p class="p2"><span class="Apple-converted-space">            </span>transition: opacity .2s;</p>
+<p class="p2"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><br></p>
+<p class="p2"><span class="Apple-converted-space">        </span>.slider:hover {</p>
+<p class="p2"><span class="Apple-converted-space">            </span>opacity: 200;</p>
+<p class="p2"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><br></p>
+<p class="p2"><span class="Apple-converted-space">        </span>.slider::-webkit-slider-thumb {</p>
+<p class="p2"><span class="Apple-converted-space">            </span>-webkit-appearance: none;</p>
+<p class="p2"><span class="Apple-converted-space">            </span>appearance: none;</p>
+<p class="p2"><span class="Apple-converted-space">            </span>width: 13px;</p>
+<p class="p2"><span class="Apple-converted-space">            </span>height: 13px;</p>
+<p class="p2"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
+<p class="p2"><span class="Apple-converted-space">            </span>background: #A1A1A1;</p>
+<p class="p2"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p2"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><br></p>
+<p class="p2"><span class="Apple-converted-space">        </span>.slider::-moz-range-thumb {</p>
+<p class="p2"><span class="Apple-converted-space">            </span>width: 13px;</p>
+<p class="p2"><span class="Apple-converted-space">            </span>height: 13px;</p>
+<p class="p2"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
+<p class="p2"><span class="Apple-converted-space">            </span>background: #d3d3d3;</p>
+<p class="p2"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p2"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span></p>
+<p class="p2"><span class="Apple-converted-space">      </span>.createFileInput {</p>
+<p class="p2"><span class="Apple-converted-space">            </span>background: #DADADA;</p>
+<p class="p2"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p2">let input;</p>
+<p class="p2">let img;</p>
+<p class="p2">let circleSize = 15;</p>
+<p class="p2">let threshold = 255;</p>
+<p class="p2">let oscillationSpeedX = 1;</p>
+<p class="p2">let oscillationSpeedY = 1;</p>
+<p class="p2">let oscillationSpeedZ = 1;</p>
+<p class="p2">let amplitude = 0;</p>
+<p class="p2">let circleSizeSlider, oscillationSpeedXSlider, oscillationSpeedYSlider, oscillationSpeedZSlider, amplitudeSlider;</p>
+<p class="p1"><br></p>
+<p class="p2">function preload() {</p>
+<p class="p2"><span class="Apple-converted-space">  </span>img = loadImage("Tangent.png");</p>
+<p class="p2">}</p>
+<p class="p1"><br></p>
+<p class="p2">function setup() {</p>
+<p class="p2"><span class="Apple-converted-space">  </span>createCanvas(1080, 1080, WEBGL);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>img.resize(width, height);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>img.loadPixels();</p>
+<p class="p2"><span class="Apple-converted-space">  </span>noStroke();</p>
+<p class="p2"><span class="Apple-converted-space">  </span>fill(0);</p>
+<p class="p1"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><br></p>
+<p class="p2">input = createFileInput(handleFile);</p>
+<p class="p2">input.position(20, 30);</p>
+<p class="p1"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span></p>
+<p class="p2"><span class="Apple-converted-space">  </span>// create sliders</p>
+<p class="p2"><span class="Apple-converted-space">  </span>circleSizeSlider = createSlider(5, 100, circleSize, 1);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>circleSizeSlider.position(20, 90);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>circleSizeSlider.class('slider');</p>
+<p class="p1"><br></p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedXSlider = createSlider(25, 100, oscillationSpeedX, 10);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedXSlider.position(20, 60);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedXSlider.class('slider');</p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedXSlider.hide(); // hide the slider</p>
+<p class="p1"><br></p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedYSlider = createSlider(25, 100, oscillationSpeedY, 10);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedYSlider.position(20, 90);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedYSlider.class('slider');</p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedYSlider.hide(); // hide the slider</p>
+<p class="p1"><br></p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedZSlider = createSlider(25, 110, oscillationSpeedZ, 10);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedZSlider.position(20, 120);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedZSlider.class('slider');</p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedZSlider.hide(); // hide the slider</p>
+<p class="p1"><br></p>
+<p class="p2"><span class="Apple-converted-space">  </span>amplitudeSlider = createSlider(100, 2000, amplitude, 100);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>amplitudeSlider.position(20, 120);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>amplitudeSlider.class('slider');</p>
+<p class="p1"><span class="Apple-converted-space">  </span></p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedSlider = createSlider(1, 40, oscillationSpeedX, 1);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedSlider.position(20, 150);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedSlider.class('slider');</p>
+<p class="p1"><br></p>
+<p class="p1"><br></p>
+<p class="p2">}</p>
+<p class="p1"><br></p>
+<p class="p2">function draw() {</p>
+<p class="p2"><span class="Apple-converted-space">  </span>background(255);</p>
+<p class="p1"><br></p>
+<p class="p2"><span class="Apple-converted-space">  </span>circleSize = circleSizeSlider.value();</p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedX = oscillationSpeedXSlider.value();</p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedY = oscillationSpeedYSlider.value();</p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedZ = oscillationSpeedZSlider.value();</p>
+<p class="p2"><span class="Apple-converted-space">  </span>amplitude = amplitudeSlider.value();</p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeed = oscillationSpeedSlider.value();</p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedX = oscillationSpeed;</p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedY = oscillationSpeed;</p>
+<p class="p2"><span class="Apple-converted-space">  </span>oscillationSpeedZ = oscillationSpeed;</p>
+<p class="p1"><br></p>
+<p class="p1"><br></p>
+<p class="p2"><span class="Apple-converted-space">  </span>translate(-width / 2, -height / 2, -height / 2);</p>
+<p class="p1"><br></p>
+<p class="p2"><span class="Apple-converted-space">  </span>for (let y = 0; y &lt; height; y += circleSize) {</p>
+<p class="p2"><span class="Apple-converted-space">    </span>for (let x = 0; x &lt; width; x += circleSize) {</p>
+<p class="p2"><span class="Apple-converted-space">      </span>let index = (x + y * width) * 4;</p>
+<p class="p2"><span class="Apple-converted-space">      </span>let r = img.pixels[index];</p>
+<p class="p2"><span class="Apple-converted-space">      </span>let g = img.pixels[index + 1];</p>
+<p class="p2"><span class="Apple-converted-space">      </span>let b = img.pixels[index + 2];</p>
+<p class="p2"><span class="Apple-converted-space">      </span>let gray = (r + g + b) / 3;</p>
+<p class="p1"><br></p>
+<p class="p2"><span class="Apple-converted-space">      </span>if (gray &lt; threshold) {</p>
+<p class="p2"><span class="Apple-converted-space">        </span>let size = map(gray, 0, 255, circleSize, 0);</p>
+<p class="p2"><span class="Apple-converted-space">        </span>let oscillationX = sin(frameCount * (oscillationSpeedX / 100) + x) * amplitude;</p>
+<p class="p2"><span class="Apple-converted-space">        </span>let oscillationY = sin(frameCount * (oscillationSpeedY / 100) + y) * amplitude;</p>
+<p class="p2"><span class="Apple-converted-space">        </span>let oscillationZ = sin(frameCount * (oscillationSpeedZ / 100) + x + y) * amplitude;</p>
+<p class="p2"><span class="Apple-converted-space">        </span>push();</p>
+<p class="p2"><span class="Apple-converted-space">        </span>translate(x + circleSize / 2, y + circleSize / 2, (oscillationX + oscillationY + oscillationZ) / 3);</p>
+<p class="p2"><span class="Apple-converted-space">        </span>ellipse(0, 0, size);</p>
+<p class="p2"><span class="Apple-converted-space">        </span>pop();</p>
+<p class="p2"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2">}</p>
+<p class="p1"><br></p>
+<p class="p2">function loadImagePixels() {</p>
+<p class="p2"><span class="Apple-converted-space">  </span>img.resize(width, height);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>img.loadPixels();</p>
+<p class="p2">}</p>
+<p class="p1"><br></p>
+<p class="p2">function handleFile(file) {</p>
+<p class="p2"><span class="Apple-converted-space">  </span>if (file.type === 'image') {</p>
+<p class="p2"><span class="Apple-converted-space">    </span>img = loadImage(file.data, loadImagePixels);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>} else {</p>
+<p class="p2"><span class="Apple-converted-space">    </span>console.log('Not an image file!');</p>
+<p class="p2"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2">}</p>
+<p class="p2">&lt;/script&gt;</p>
+<p class="p1"><br></p>
+<p class="p1"><br></p>
+<p class="p2">&lt;/head&gt;</p>
+<p class="p2">&lt;body&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span>&lt;script src="sketch.js"&gt;&lt;/script&gt;</p>
+<p class="p2">&lt;/body&gt;</p>
+<p class="p2">&lt;/html&gt;</p>
+<p class="p1"><br></p>
+<p class="p1"><br></p>
+<p class="p1"><br></p>
+</body>
+</html>
